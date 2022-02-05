@@ -26,8 +26,13 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         setNavigationBar()
         
-        items.append(Post(fullname: "Sherzod", user_img: "im_person1", post_img: "im_post1"))
-        items.append(Post(fullname: "Sardor", user_img: "im_person2", post_img: "im_post2"))
+        items.append(Post(fullname: "Sherzod", user_img: "im_person1", post_img: "im_post1", post2_img: "im_post2"))
+        items.append(Post(fullname: "Sardor", user_img: "im_person2", post_img: "im_post1", post2_img: "im_post2"))
+        items.append(Post(fullname: "Sherzod", user_img: "im_person1", post_img: "im_post1", post2_img: "im_post2"))
+        items.append(Post(fullname: "Sardor", user_img: "im_person2", post_img: "im_post1", post2_img: "im_post2"))
+        items.append(Post(fullname: "Sherzod", user_img: "im_person1", post_img: "im_post1", post2_img: "im_post2"))
+        items.append(Post(fullname: "Sardor", user_img: "im_person2", post_img: "im_post1", post2_img: "im_post2"))
+                     
     }
     
     func setNavigationBar(){
@@ -65,7 +70,8 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         
         cell.fullnameLabel.text = item.fullname
         cell.profileImageView.image = UIImage(named: item.user_img!)
-        cell.postImageView.image = UIImage(named: item.post_img!)
+        cell.postImageView1.image = UIImage(named: item.post_img!)
+        cell.postImageView2.image = UIImage(named: item.post2_img!)
         
         return cell
     }
